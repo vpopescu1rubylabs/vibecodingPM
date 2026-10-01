@@ -178,37 +178,43 @@ test('rules: fully valid section A is complete', () => {
 test('rules: empty form flags every required section A field, and nothing in B', () => {
   const r = R.validateAll({}, fixture, opts);
   assert.equal(r.complete, false);
-  for (const id of ['tfn', 'surname', 'given_name', 'addr1', 'suburb', 'state', 'postcode', 'dob',
+  for (const id of ['surname', 'given_name', 'addr1', 'suburb', 'state', 'postcode', 'dob',
     'basis', 'residency', 'tax_free', 'help_debt', 'sig_a', 'date_a']) {
     assert.ok(r.errors[id], 'expected error for ' + id);
   }
-  for (const id of ['title', 'other_names', 'addr2', 'prev_name', 'email', 'abn', 'biz_name1']) {
+  assert.ok(r.warnings.tfn, 'empty TFN is a warning, not an error');
+  for (const id of ['tfn', 'title', 'other_names', 'addr2', 'prev_name', 'email', 'abn', 'biz_name1']) {
     assert.equal(r.errors[id], undefined, id);
   }
 });
-test('rules: Q1 TFN or exactly one exemption', () => {
+test('rules: Q1 TFN or exactly one exemption (warnings only, never blocking)', () => {
   // exemption alone satisfies Q1
   for (const ex of R.EXEMPT_IDS) {
     const r = R.validateAll(goodA({ tfn: '', [ex]: 'yes' }), fixture, opts);
-    assert.equal(r.errors.tfn, undefined, ex);
+    assert.equal(r.warnings.tfn, undefined, ex);
     assert.equal(r.complete, true, ex);
   }
   // false checkbox doesn't count
-  assert.ok(R.validateAll(goodA({ tfn: '', tfn_applied: '' }), fixture, opts).errors.tfn);
+  const none = R.validateAll(goodA({ tfn: '', tfn_applied: '' }), fixture, opts);
+  assert.ok(none.warnings.tfn);
+  assert.equal(none.complete, true);
   // two exemptions -> mutually exclusive
   const two = R.validateAll(goodA({ tfn: '', tfn_applied: 'yes', tfn_pension: 'yes' }), fixture, opts);
-  assert.ok(two.errors.tfn_applied && two.errors.tfn_pension);
-  assert.equal(two.complete, false);
+  assert.ok(two.warnings.tfn_applied && two.warnings.tfn_pension);
+  assert.equal(two.complete, true);
   // TFN + exemption -> conflict
   const both = R.validateAll(goodA({ tfn_under18: 'yes' }), fixture, opts);
-  assert.ok(both.errors.tfn);
-  assert.ok(both.errors.tfn_under18);
+  assert.ok(both.warnings.tfn);
+  assert.ok(both.warnings.tfn_under18);
+  assert.equal(both.complete, true);
   // bad TFN
   const badTfn = R.validateAll(goodA({ tfn: '123456783' }), fixture, opts);
-  assert.match(badTfn.errors.tfn, /doesn't look right/);
+  assert.match(badTfn.warnings.tfn, /doesn't look right/);
+  assert.equal(badTfn.errors.tfn, undefined);
+  assert.equal(badTfn.complete, true);
 });
 test('rules: isRequired', () => {
-  assert.equal(R.isRequired('tfn', {}), true);
+  assert.equal(R.isRequired('tfn', {}), false);
   assert.equal(R.isRequired('tfn', { tfn_applied: 'yes' }), false);
   assert.equal(R.isRequired('tfn_pension', {}), false);
   assert.equal(R.isRequired('surname', {}), true);

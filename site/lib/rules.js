@@ -63,8 +63,7 @@
   }
 
   function isRequired(fieldId, values, opts) {
-    if (fieldId === 'tfn') return exemptCount(values) === 0;
-    if (EXEMPT.indexOf(fieldId) >= 0) return false;
+    if (fieldId === 'tfn' || EXEMPT.indexOf(fieldId) >= 0) return false;
     if (A_REQUIRED.indexOf(fieldId) >= 0) return true;
     if (fieldId === 'abn') return sectionBStarted(values, opts) && get(values, 'abn_applied') !== 'yes';
     if (B_REQUIRED.indexOf(fieldId) >= 0) return sectionBStarted(values, opts);
@@ -159,6 +158,10 @@
     } else if (has(get(values, 'tfn'))) {
       checkValue('tfn');
     }
+    // Q1 (TFN / exemptions) is guidance only: shown as a warning, never blocks Next or export.
+    ['tfn'].concat(EXEMPT).forEach(function (id) {
+      if (errors[id]) { warnings[id] = errors[id]; delete errors[id]; }
+    });
     ['title', 'surname', 'given_name', 'other_names', 'addr1', 'addr2', 'suburb', 'state',
       'postcode', 'prev_name', 'email', 'dob'].concat(CHOICES, ['sig_a', 'date_a'])
       .forEach(requireAndCheck);
