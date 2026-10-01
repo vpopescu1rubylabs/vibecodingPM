@@ -129,7 +129,8 @@
 .zde-rv-actions .zde-btn { height: 42px; }
 .zde-secondary { background: #e9eef6; color: #2a4a75; }
 .zde-ghost { color: var(--zde-sec); }
-.zde-rv-actions [aria-disabled="true"] { opacity: .4; cursor: not-allowed; }
+.zde-panel:has(.zde-rv-foot) { padding-bottom: 0; }
+.zde-rv-foot { position: sticky; bottom: 0; background: #fff; padding: 10px 0 24px; box-shadow: 0 -10px 12px -10px rgba(0,0,0,.18); }
 .zde-rv-status { margin: 12px 0 0; font-size: 13.5px; line-height: 19px; color: #1b5e34; min-height: 0; }
 .zde-rv-status:empty { display: none; }
 .zde-rv-status.zde-bad { color: #a3281d; }
@@ -144,6 +145,7 @@
   .zde-sizer { margin: 12px auto 120px; }
   .zde-title { font-size: 16px; line-height: 21px; }
   .zde-panel { padding: 18px; }
+  .zde-rv-foot { padding-bottom: 18px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .zde-card, .zde-backdrop, .zde-stack, .zde-head, .zde-under, .zde-hot { transition: none !important; }

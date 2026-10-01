@@ -913,7 +913,7 @@
     if (complete) {
       panel.appendChild(h('p', { class: 'zde-rv-sub', text: bStarted ? 'Sections A and B are complete.' : 'Section A is complete. Section B (the payer section) is optional – your employer can complete it.' }));
     } else {
-      panel.appendChild(h('p', { class: 'zde-rv-sub', text: 'Select an item to jump to that question.' }));
+      panel.appendChild(h('p', { class: 'zde-rv-sub', text: 'Select an item to jump to that question, or download the form as it is.' }));
       var ul = h('ul', { class: 'zde-rv-list' });
       var seen = {};
       ids.forEach(function (id) {
@@ -931,11 +931,10 @@
       warnIds.forEach(function (id) { wl.appendChild(h('li', { text: res.warnings[id] })); });
       panel.appendChild(wl);
     }
-    var dl = h('button', { type: 'button', class: 'zde-btn zde-primary', text: 'Download PDF', 'aria-disabled': complete ? null : 'true', onclick: function () { if (!complete) return; doExport('pdf', status); } });
-    var pr = h('button', { type: 'button', class: 'zde-btn zde-secondary', text: 'Print', 'aria-disabled': complete ? null : 'true', onclick: function () { if (!complete) return; doExport('print', status); } });
+    var dl = h('button', { type: 'button', class: 'zde-btn zde-primary', text: complete ? 'Download PDF' : 'Download anyway', onclick: function () { doExport('pdf', status); } });
+    var pr = h('button', { type: 'button', class: 'zde-btn zde-secondary', text: 'Print', onclick: function () { doExport('print', status); } });
     var bk = h('button', { type: 'button', class: 'zde-btn zde-ghost', text: complete ? 'Back to the form' : 'Close', onclick: function () { closeReview(); } });
-    panel.appendChild(h('div', { class: 'zde-rv-actions' }, dl, pr, bk));
-    panel.appendChild(status);
+    panel.appendChild(h('div', { class: 'zde-rv-foot' }, h('div', { class: 'zde-rv-actions' }, dl, pr, bk), status));
     document.body.appendChild(el);
     canvasEl.inert = true;
     reviewEl = el;
@@ -991,8 +990,6 @@
   }
   function gate(kind) {
     if (!ready) return Promise.resolve(false);
-    var res = validateAll();
-    if (Object.keys(res.errors).length) { if (ov) closeOverlay(true); openReview(); return Promise.resolve(false); }
     return doExport(kind, reviewEl ? reviewEl.querySelector('.zde-rv-status') : null);
   }
 
