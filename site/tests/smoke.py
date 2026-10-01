@@ -90,6 +90,8 @@ with sync_playwright() as p:
                 check(page.evaluate("getComputedStyle(document.querySelector('.zd-bottombar')).display!=='none' && getComputedStyle(document.querySelector('.zd-sidebar')).display==='none'"), "%s fill.html: mobile layout @390px" % kind)
                 check(page.evaluate("document.fonts.check('600 14px Inter')"), "%s fill.html: Inter embedded" % kind)
                 check(page.evaluate("document.querySelector('[data-act=guided]').getAttribute('role')==='switch'"), "%s fill.html: guided switch" % kind)
+                check(page.evaluate("document.querySelector('.zde-ov .zde-count') && document.querySelector('.zde-ov .zde-count').textContent.startsWith('1 /')"), "%s fill.html: question 1 opens on arrival" % kind)
+                page.evaluate("ZDEditor.close()"); page.wait_for_timeout(450)
                 page.click(".zd-guided-m [data-act=guided]")
                 check(page.evaluate("localStorage.getItem('zd-focus-mode')")=='0', "%s fill.html: guided toggle persists" % kind)
                 page.evaluate("localStorage.clear()")

@@ -63,7 +63,8 @@
   }
 
   function isRequired(fieldId, values, opts) {
-    if (fieldId === 'tfn' || EXEMPT.indexOf(fieldId) >= 0) return false;
+    if (fieldId === 'tfn') return exemptCount(values) === 0;   // only drives the Next/Skip label; Q1 never blocks
+    if (EXEMPT.indexOf(fieldId) >= 0) return false;
     if (A_REQUIRED.indexOf(fieldId) >= 0) return true;
     if (fieldId === 'abn') return sectionBStarted(values, opts) && get(values, 'abn_applied') !== 'yes';
     if (B_REQUIRED.indexOf(fieldId) >= 0) return sectionBStarted(values, opts);

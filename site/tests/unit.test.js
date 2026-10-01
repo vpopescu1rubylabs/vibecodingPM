@@ -214,7 +214,7 @@ test('rules: Q1 TFN or exactly one exemption (warnings only, never blocking)', (
   assert.equal(badTfn.complete, true);
 });
 test('rules: isRequired', () => {
-  assert.equal(R.isRequired('tfn', {}), false);
+  assert.equal(R.isRequired('tfn', {}), true);
   assert.equal(R.isRequired('tfn', { tfn_applied: 'yes' }), false);
   assert.equal(R.isRequired('tfn_pension', {}), false);
   assert.equal(R.isRequired('surname', {}), true);

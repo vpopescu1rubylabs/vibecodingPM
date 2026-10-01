@@ -116,6 +116,8 @@
     ready = true;
     pending.splice(0).forEach(function (fn) { fn(); });
     emit('change');
+    // land on question 1 already open so first-time users see what to fill in
+    if (guided && !ov) open(0);
   }
 
   /* ---------- question bands (page space) ---------- */
