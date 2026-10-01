@@ -1,0 +1,91 @@
+/* Zendocs landing - plain CSS, no external requests */
+:root{
+  --ink:#0d0d0d;--body:#3a3a3a;--muted:#5d5d5d;
+  --blue:#1f75db;--blue-hover:#1b68c4;--blue-text:#175fb4;--blue-tint:#e3eefb;
+  --green:#3fc374;--grey:#f0f2f3;--line:#e6e6e6;--line-2:#d9dcde;
+  --gutter:max(24px,calc((100% - 1120px)/2));
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:var(--blue-text);text-decoration:none}
+a:hover{color:#124a8c}
+:focus-visible{outline:3px solid #0b3d91;outline-offset:3px;border-radius:4px}
+
+.skip{position:absolute;left:12px;top:-60px;z-index:10;background:#0d0d0d;color:#fff;padding:10px 16px;border-radius:8px;font-size:0.9375rem;font-weight:600}
+.skip:focus{top:12px;color:#fff}
+
+/* header */
+.site-header{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--gutter);border-bottom:1px solid var(--line)}
+.logo{min-height:44px;display:flex;align-items:center;gap:6px;color:var(--ink);font-size:1.125rem;font-weight:600}
+.logo:hover{color:var(--ink)}
+
+/* buttons */
+.btn{display:flex;align-items:center;background:var(--blue);color:#fff;font-weight:600;transition:background .15s}
+.btn:hover{background:var(--blue-hover);color:#fff}
+.btn:focus-visible{outline-color:#0b3d91;outline-offset:3px}
+.btn-sm{height:44px;padding:0 22px;border-radius:22px;font-size:0.9375rem;font-weight:500}
+.btn-lg{height:52px;padding:0 28px;border-radius:26px;font-size:1.062rem;gap:10px}
+
+/* hero */
+.hero{background:var(--grey);padding:64px var(--gutter) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:end;overflow:hidden}
+.hero-copy{align-self:center;padding-bottom:64px;max-width:540px}
+.badge{display:inline-flex;height:28px;padding:0 12px;border-radius:14px;background:var(--blue-tint);color:var(--blue-text);font-size:0.8125rem;font-weight:600;align-items:center}
+h1{margin:16px 0 0;font-size:clamp(2.1rem,5vw,3.25rem);line-height:1.08;font-weight:700;letter-spacing:-1.2px;text-wrap:balance}
+.lede{margin:20px 0 0;font-size:1.125rem;line-height:1.55;color:var(--muted);text-wrap:pretty}
+.cta-row{margin-top:32px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+.cta-note{font-size:0.875rem;color:var(--muted)}
+.trust{margin:20px 0 0;display:flex;align-items:flex-start;gap:8px;font-size:0.875rem;line-height:1.5;color:var(--body)}
+.trust svg{flex:none;margin-top:2px}
+.hero-shot{justify-self:center;width:100%;max-width:520px;margin:0}
+.shot-frame{height:440px;overflow:hidden;border-radius:10px 10px 0 0;background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.12)}
+.shot-frame img{display:block;width:100%;height:auto}
+
+/* sections */
+.section{padding:88px var(--gutter)}
+h2{margin:0;font-size:2rem;line-height:1.2;font-weight:700;letter-spacing:-.6px}
+.steps{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.step{border:1px solid var(--line);border-radius:16px;padding:28px}
+.step-n{width:36px;height:36px;border-radius:18px;background:var(--blue-tint);color:var(--blue-text);font-size:1rem;font-weight:600;display:flex;align-items:center;justify-content:center}
+h3{margin:20px 0 0;font-size:1.25rem;font-weight:600;letter-spacing:-.2px}
+.step p{margin:8px 0 0;font-size:1rem;line-height:1.55;color:var(--muted);text-wrap:pretty}
+
+.about{background:var(--grey);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:48px}
+.about p{margin:16px 0 0;font-size:1.062rem;line-height:1.6;color:var(--body);text-wrap:pretty}
+.about .disclaimer{font-size:0.875rem;line-height:1.55;color:var(--muted)}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column}
+.faq details{border-top:1px solid var(--line-2)}
+.faq details:last-child{border-bottom:1px solid var(--line-2)}
+.faq summary{min-height:44px;list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;font-size:1rem;font-weight:600;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:8px;height:8px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);margin-top:-4px;transition:transform .15s}
+.faq details[open] summary::after{transform:rotate(-135deg);margin-top:4px}
+.faq summary:hover{color:var(--blue-text)}
+.faq .ans{margin:-8px 0 0;padding:0 0 20px;font-size:0.9375rem;line-height:1.55;color:var(--muted);text-wrap:pretty}
+.faq .ans p{margin:0 0 8px}
+.faq .ans p:last-child{margin:0}
+
+.privacy p{margin:16px 0 0;font-size:1.0625rem;line-height:1.6;color:var(--body);max-width:640px}
+
+/* final CTA */
+.final{padding:88px 24px;text-align:center}
+.final h2{margin:0 auto;max-width:640px;font-size:2.25rem;line-height:1.15;letter-spacing:-.8px;text-wrap:balance}
+.final .btn{margin:28px auto 0;width:max-content}
+.final .trust{justify-content:center;margin-top:20px}
+
+/* footer */
+.site-footer{border-top:1px solid var(--line);padding:28px var(--gutter);font-size:0.8125rem;line-height:1.5;color:var(--muted)}
+.site-footer p{margin:0}
+.site-footer a{text-decoration:underline;display:inline-block;padding:10px 2px}
+
+@media (max-width:480px){
+  .section{padding-top:64px;padding-bottom:64px}
+  h2{font-size:1.75rem}
+  .final h2{font-size:1.875rem}
+  .shot-frame{height:340px}
+}
+.section.privacy{padding-top:0;padding-bottom:16px}

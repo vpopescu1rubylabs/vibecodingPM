@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fill in your TFN declaration</title>
+<meta name="description" content="Fill in the ATO Tax file number declaration (NAT 3092) step by step. Your details never leave your device.">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#1f75db">
+<style id="editor-css-slot"></style>
+<link rel="stylesheet" href="editor.css">
+</head>
+<body>
+<a class="skip" href="#stage">Skip to the question</a>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="index.html" aria-label="Zendocs home"><span class="logo" aria-hidden="true">Z</span><span class="brand-name">Zendocs</span></a>
+    <p class="privacy-pill" id="privacy-pill">
+      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 1 3 5v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V5l-9-4Zm-1 14-3.5-3.5 1.4-1.4L11 12.2l4.1-4.1 1.4 1.4L11 15Z"/></svg>
+      <span>Your data never leaves this device</span>
+    </p>
+    <button type="button" class="link-btn" id="btn-startover-top">Start over</button>
+  </div>
+  <div class="progress" id="progress" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-bar"></span></div>
+</header>
+
+<div class="banner" id="resume-banner" role="region" aria-label="Saved draft" hidden>
+  <p><strong>Welcome back.</strong> We found a draft saved on this device.</p>
+  <div class="banner-actions">
+    <button type="button" class="btn btn-primary btn-sm" id="btn-resume">Continue where I left off</button>
+    <button type="button" class="btn btn-ghost btn-sm" id="btn-discard">Delete draft</button>
+  </div>
+</div>
+
+<div class="layout" id="layout">
+  <aside class="pv" id="pv" aria-label="Live preview of your form">
+    <div class="pv-bar">
+      <button type="button" class="pv-toggle" id="pv-toggle" aria-expanded="true" aria-controls="pv-body">
+        <span class="chev" aria-hidden="true"></span> Form preview
+      </button>
+      <button type="button" class="link-btn" id="pv-mode" aria-pressed="false">Show whole form</button>
+    </div>
+    <div class="pv-body" id="pv-body">
+      <div class="pv-viewport" id="pv-viewport">
+        <div class="pv-stage" id="pv-stage"><canvas id="pv-canvas" role="img" aria-label="Preview of your declaration form. It updates as you type."></canvas></div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="panel" id="panel">
+    <h1 class="sr-only">Tax file number declaration (NAT 3092) form filler</h1>
+    <div class="stage" id="stage" tabindex="-1" aria-live="off"></div>
+    <nav class="nav" id="nav" aria-label="Question navigation" hidden>
+      <button type="button" class="btn btn-ghost" id="btn-back">Back</button>
+      <button type="button" class="btn btn-primary" id="btn-next">Next</button>
+    </nav>
+  </main>
+</div>
+
+<p class="sr-only" id="announcer" role="status" aria-live="polite"></p>
+
+<dialog class="dlg" id="dlg-confirm" aria-labelledby="dlg-title">
+  <form method="dialog">
+    <h2 id="dlg-title">Start over?</h2>
+    <p>This deletes everything you have typed, including your signature, from this device. It cannot be undone.</p>
+    <div class="dlg-actions">
+      <button type="submit" value="cancel" class="btn btn-ghost" id="dlg-cancel">Keep my answers</button>
+      <button type="submit" value="ok" class="btn btn-danger" id="dlg-ok">Delete and start over</button>
+    </div>
+  </form>
+</dialog>
+
+<noscript><p class="noscript">This form needs JavaScript to run in your browser. Nothing is sent anywhere.</p></noscript>
+
+<!-- build.py replaces the contents of this block with src/fields.json -->
+<script type="application/json" id="fields-json"></script>
+<!-- build.py inlines the libs and editor.js in this same order -->
+<script src="../lib/validate.js"></script>
+<script src="../lib/rules.js"></script>
+<script src="../lib/render.js"></script>
+<script src="../lib/pdf.js"></script>
+<script src="../lib/store.js"></script>
+<script src="editor.js"></script>
+</body>
+</html>

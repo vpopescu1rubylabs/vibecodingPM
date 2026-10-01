@@ -1,0 +1,3425 @@
+{
+ "image": {
+  "src": "nat3092.png",
+  "w": 1024,
+  "h": 1449
+ },
+ "steps": [
+  {
+   "id": "A1",
+   "section": "A",
+   "title": "Your tax file number",
+   "fieldIds": [
+    "tfn",
+    "tfn_applied",
+    "tfn_under18",
+    "tfn_pension"
+   ],
+   "help": "Use your TFN, or tick one of the three exceptions if you do not have one yet."
+  },
+  {
+   "id": "A2",
+   "section": "A",
+   "title": "Your name",
+   "fieldIds": [
+    "title",
+    "surname",
+    "given_name",
+    "other_names"
+   ],
+   "help": "Title is optional. Surname and first given name are needed."
+  },
+  {
+   "id": "A3",
+   "section": "A",
+   "title": "Your home address in Australia",
+   "fieldIds": [
+    "addr1",
+    "addr2",
+    "suburb",
+    "state",
+    "postcode"
+   ],
+   "help": "The address where you live."
+  },
+  {
+   "id": "A4",
+   "section": "A",
+   "title": "Previous family name",
+   "fieldIds": [
+    "prev_name"
+   ],
+   "help": "Only fill this in if you changed your name since you last dealt with the ATO."
+  },
+  {
+   "id": "A5",
+   "section": "A",
+   "title": "Your e-mail address",
+   "fieldIds": [
+    "email"
+   ],
+   "help": "Optional. Your primary e-mail address."
+  },
+  {
+   "id": "A6",
+   "section": "A",
+   "title": "Your date of birth",
+   "fieldIds": [
+    "dob"
+   ],
+   "help": "Day, month and year."
+  },
+  {
+   "id": "A7",
+   "section": "A",
+   "title": "How are you paid?",
+   "fieldIds": [
+    "basis"
+   ],
+   "help": "Select only one."
+  },
+  {
+   "id": "A8",
+   "section": "A",
+   "title": "Your tax residency",
+   "fieldIds": [
+    "residency"
+   ],
+   "help": "Select only one."
+  },
+  {
+   "id": "A9",
+   "section": "A",
+   "title": "Tax-free threshold",
+   "fieldIds": [
+    "tax_free"
+   ],
+   "help": "Only claim the tax-free threshold from one payer at a time, unless your total income will be under the threshold."
+  },
+  {
+   "id": "A10",
+   "section": "A",
+   "title": "Study and training loans",
+   "fieldIds": [
+    "help_debt"
+   ],
+   "help": "HELP, VSL, FS, SSL or TSL debt? Your payer withholds extra to cover repayments."
+  },
+  {
+   "id": "A11",
+   "section": "A",
+   "title": "Sign and date your declaration",
+   "fieldIds": [
+    "sig_a",
+    "date_a"
+   ],
+   "help": "You declare that the information is true and correct. There are penalties for deliberately making a false or misleading statement."
+  },
+  {
+   "id": "B1",
+   "section": "B",
+   "title": "Payer: ABN or withholding payer number",
+   "fieldIds": [
+    "abn",
+    "branch"
+   ],
+   "help": "Payer section (optional): your employer can complete this."
+  },
+  {
+   "id": "B2",
+   "section": "B",
+   "title": "Payer: applied for an ABN?",
+   "fieldIds": [
+    "abn_applied"
+   ],
+   "help": "Only if the payer has no ABN or withholding payer number."
+  },
+  {
+   "id": "B3",
+   "section": "B",
+   "title": "Payer: business name",
+   "fieldIds": [
+    "biz_name1",
+    "biz_name2",
+    "biz_name3"
+   ],
+   "help": "Legal name or registered business name (or individual name if not in business)."
+  },
+  {
+   "id": "B4",
+   "section": "B",
+   "title": "Payer: business address",
+   "fieldIds": [
+    "biz_addr1",
+    "biz_addr2",
+    "biz_suburb",
+    "biz_state",
+    "biz_postcode"
+   ],
+   "help": ""
+  },
+  {
+   "id": "B5",
+   "section": "B",
+   "title": "Payer: e-mail address",
+   "fieldIds": [
+    "biz_email"
+   ],
+   "help": "Optional."
+  },
+  {
+   "id": "B6",
+   "section": "B",
+   "title": "Payer: contact person",
+   "fieldIds": [
+    "contact",
+    "biz_phone"
+   ],
+   "help": "Who the ATO should contact, and a business phone number."
+  },
+  {
+   "id": "B7",
+   "section": "B",
+   "title": "Payer: no longer paying this payee?",
+   "fieldIds": [
+    "payee_ceased"
+   ],
+   "help": "Print X only if you no longer make payments to this payee."
+  },
+  {
+   "id": "B8",
+   "section": "B",
+   "title": "Payer: sign and date",
+   "fieldIds": [
+    "sig_b",
+    "date_b"
+   ],
+   "help": "Payer declaration that the information is true and correct."
+  }
+ ],
+ "fields": [
+  {
+   "id": "tfn",
+   "q": "A1",
+   "section": "A",
+   "label": "Tax file number (TFN)",
+   "type": "boxes",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 235,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 162,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "tfn",
+   "placeholder": "123 456 782",
+   "help": "Your 9-digit TFN, as shown on your TFN notice or ATO correspondence. Leave blank only if you tick one of the three options that follow.",
+   "groups": [
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "id": "tfn_applied",
+   "q": "A1",
+   "section": "A",
+   "label": "I have made a separate application/enquiry to the ATO for a new or existing TFN",
+   "type": "checkbox",
+   "options": [
+    {
+     "value": "yes",
+     "label": "Tick",
+     "rect": {
+      "x": 479,
+      "y": 204,
+      "w": 20,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Tick only if you have applied for, or asked the ATO about, a TFN and do not have it yet."
+  },
+  {
+   "id": "tfn_under18",
+   "q": "A1",
+   "section": "A",
+   "label": "I am claiming an exemption because I am under 18 years of age and do not earn enough to pay tax",
+   "type": "checkbox",
+   "options": [
+    {
+     "value": "yes",
+     "label": "Tick",
+     "rect": {
+      "x": 479,
+      "y": 245,
+      "w": 20,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Tick only if you are under 18 and do not earn enough to pay tax."
+  },
+  {
+   "id": "tfn_pension",
+   "q": "A1",
+   "section": "A",
+   "label": "I am claiming an exemption because I am in receipt of a pension, benefit or allowance",
+   "type": "checkbox",
+   "options": [
+    {
+     "value": "yes",
+     "label": "Tick",
+     "rect": {
+      "x": 479,
+      "y": 287,
+      "w": 20,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Tick only if you receive a pension, benefit or allowance."
+  },
+  {
+   "id": "title",
+   "q": "A2",
+   "section": "A",
+   "label": "Title",
+   "type": "choice",
+   "options": [
+    {
+     "value": "mr",
+     "label": "Mr",
+     "rect": {
+      "x": 260,
+      "y": 330,
+      "w": 20,
+      "h": 27
+     }
+    },
+    {
+     "value": "mrs",
+     "label": "Mrs",
+     "rect": {
+      "x": 333,
+      "y": 330,
+      "w": 20,
+      "h": 27
+     }
+    },
+    {
+     "value": "miss",
+     "label": "Miss",
+     "rect": {
+      "x": 406,
+      "y": 330,
+      "w": 20,
+      "h": 27
+     }
+    },
+    {
+     "value": "ms",
+     "label": "Ms",
+     "rect": {
+      "x": 479,
+      "y": 330,
+      "w": 20,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Optional. Pick the title you use."
+  },
+  {
+   "id": "surname",
+   "q": "A2",
+   "section": "A",
+   "label": "Surname or family name",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 377,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 377,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 377,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 377,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 377,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 377,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "name",
+   "placeholder": "SMITH",
+   "help": "Write in BLOCK LETTERS, one letter per box."
+  },
+  {
+   "id": "given_name",
+   "q": "A2",
+   "section": "A",
+   "label": "First given name",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 423,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 423,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 423,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 423,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 423,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 423,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "name",
+   "placeholder": "JANE",
+   "help": "BLOCK LETTERS."
+  },
+  {
+   "id": "other_names",
+   "q": "A2",
+   "section": "A",
+   "label": "Other given names",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 469,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 469,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 469,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 469,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 469,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 469,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "MARY",
+   "help": "Optional. Any other given names."
+  },
+  {
+   "id": "addr1",
+   "q": "A3",
+   "section": "A",
+   "label": "Home address (line 1)",
+   "type": "boxes",
+   "charset": "address",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 535,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 535,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 535,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 535,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 535,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 535,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "12 EXAMPLE STREET",
+   "help": "Your home address in Australia (not a PO Box)."
+  },
+  {
+   "id": "addr2",
+   "q": "A3",
+   "section": "A",
+   "label": "Home address (line 2)",
+   "type": "boxes",
+   "charset": "address",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 577,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 577,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 577,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 577,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 577,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 577,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "",
+   "help": "Continue the address here if needed. Optional."
+  },
+  {
+   "id": "suburb",
+   "q": "A3",
+   "section": "A",
+   "label": "Suburb/town/locality",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 621,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 621,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 621,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 621,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 621,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 621,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "SYDNEY",
+   "help": "BLOCK LETTERS."
+  },
+  {
+   "id": "state",
+   "q": "A3",
+   "section": "A",
+   "label": "State/territory",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 665,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 665,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 665,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "state",
+   "placeholder": "NSW",
+   "help": "NSW, VIC, QLD, SA, WA, TAS, NT or ACT."
+  },
+  {
+   "id": "postcode",
+   "q": "A3",
+   "section": "A",
+   "label": "Postcode",
+   "type": "boxes",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 162,
+     "y": 665,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 665,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 665,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 665,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "postcode",
+   "placeholder": "2000",
+   "help": "4-digit Australian postcode."
+  },
+  {
+   "id": "prev_name",
+   "q": "A4",
+   "section": "A",
+   "label": "Previous family name",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 65,
+     "y": 746,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 89,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 113,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 138,
+     "y": 746,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 162,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 187,
+     "y": 746,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 211,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 235,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 260,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 284,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 309,
+     "y": 746,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 333,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 357,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 382,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 406,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 431,
+     "y": 746,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 455,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 479,
+     "y": 746,
+     "w": 20,
+     "h": 26
+    }
+   ],
+   "validator": "none",
+   "placeholder": "JONES",
+   "help": "Only if you changed your name since you last dealt with the ATO. Otherwise leave blank."
+  },
+  {
+   "id": "email",
+   "q": "A5",
+   "section": "A",
+   "label": "Primary e-mail address",
+   "type": "boxes",
+   "charset": "email",
+   "boxes": [
+    {
+     "x": 545,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 570,
+     "y": 162,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 594,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 618,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 643,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 667,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 692,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 716,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 741,
+     "y": 162,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 765,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 789,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 814,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 838,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 863,
+     "y": 162,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 887,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 911,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 936,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 960,
+     "y": 162,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 985,
+     "y": 162,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 545,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 570,
+     "y": 206,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 594,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 618,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 643,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 667,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 692,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 716,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 741,
+     "y": 206,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 765,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 789,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 814,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 838,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 863,
+     "y": 206,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 887,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 911,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 936,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 960,
+     "y": 206,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 985,
+     "y": 206,
+     "w": 19,
+     "h": 27
+    }
+   ],
+   "validator": "email",
+   "placeholder": "name@example.com",
+   "help": "Optional. Continues onto the second row if it is long.",
+   "rows": [
+    19,
+    19
+   ]
+  },
+  {
+   "id": "dob",
+   "q": "A6",
+   "section": "A",
+   "label": "Date of birth",
+   "type": "date",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 785,
+     "y": 261,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 809,
+     "y": 261,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 848,
+     "y": 261,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 872,
+     "y": 261,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 911,
+     "y": 261,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 936,
+     "y": 261,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 960,
+     "y": 261,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 985,
+     "y": 261,
+     "w": 19,
+     "h": 27
+    }
+   ],
+   "groups": [
+    2,
+    2,
+    4
+   ],
+   "validator": "date",
+   "placeholder": "DD MM YYYY",
+   "help": "Day, month and year."
+  },
+  {
+   "id": "basis",
+   "q": "A7",
+   "section": "A",
+   "label": "On what basis are you paid?",
+   "type": "choice",
+   "options": [
+    {
+     "value": "fulltime",
+     "label": "Full-time employment",
+     "rect": {
+      "x": 614,
+      "y": 325,
+      "w": 19,
+      "h": 27
+     }
+    },
+    {
+     "value": "parttime",
+     "label": "Part-time employment",
+     "rect": {
+      "x": 709,
+      "y": 325,
+      "w": 20,
+      "h": 27
+     }
+    },
+    {
+     "value": "labour",
+     "label": "Labour hire",
+     "rect": {
+      "x": 775,
+      "y": 325,
+      "w": 19,
+      "h": 27
+     }
+    },
+    {
+     "value": "super",
+     "label": "Superannuation or annuity income stream",
+     "rect": {
+      "x": 889,
+      "y": 325,
+      "w": 20,
+      "h": 27
+     }
+    },
+    {
+     "value": "casual",
+     "label": "Casual employment",
+     "rect": {
+      "x": 985,
+      "y": 325,
+      "w": 19,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Select only one."
+  },
+  {
+   "id": "residency",
+   "q": "A8",
+   "section": "A",
+   "label": "Are you:",
+   "type": "choice",
+   "options": [
+    {
+     "value": "resident",
+     "label": "An Australian resident for tax purposes",
+     "rect": {
+      "x": 662,
+      "y": 393,
+      "w": 20,
+      "h": 27
+     }
+    },
+    {
+     "value": "foreign",
+     "label": "A foreign resident for tax purposes",
+     "rect": {
+      "x": 810,
+      "y": 393,
+      "w": 20,
+      "h": 27
+     }
+    },
+    {
+     "value": "whm",
+     "label": "A working holiday maker",
+     "rect": {
+      "x": 985,
+      "y": 393,
+      "w": 20,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Select only one."
+  },
+  {
+   "id": "tax_free",
+   "q": "A9",
+   "section": "A",
+   "label": "Do you want to claim the tax-free threshold from this payer?",
+   "type": "choice",
+   "options": [
+    {
+     "value": "yes",
+     "label": "Yes",
+     "rect": {
+      "x": 570,
+      "y": 502,
+      "w": 19,
+      "h": 27
+     }
+    },
+    {
+     "value": "no",
+     "label": "No",
+     "rect": {
+      "x": 633,
+      "y": 502,
+      "w": 20,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Only claim the tax-free threshold from one payer at a time, unless your total income from all sources will be less than the threshold. Answer No if you are a foreign resident or working holiday maker (except a foreign resident receiving an Australian Government pension or allowance)."
+  },
+  {
+   "id": "help_debt",
+   "q": "A10",
+   "section": "A",
+   "label": "Do you have a HELP, VSL, FS, SSL or TSL debt?",
+   "type": "choice",
+   "options": [
+    {
+     "value": "yes",
+     "label": "Yes",
+     "rect": {
+      "x": 570,
+      "y": 604,
+      "w": 19,
+      "h": 27
+     }
+    },
+    {
+     "value": "no",
+     "label": "No",
+     "rect": {
+      "x": 985,
+      "y": 604,
+      "w": 19,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Higher Education Loan Program, VET Student Loan, Financial Supplement, Student Start-up Loan or Trade Support Loan. If Yes, your payer will withhold extra amounts for compulsory repayment."
+  },
+  {
+   "id": "sig_a",
+   "q": "A11",
+   "section": "A",
+   "label": "Payee signature",
+   "type": "signature",
+   "rect": {
+    "x": 526,
+    "y": 683,
+    "w": 248,
+    "h": 38
+   },
+   "validator": "none",
+   "help": "Declaration: the information you have given is true and correct."
+  },
+  {
+   "id": "date_a",
+   "q": "A11",
+   "section": "A",
+   "label": "Date signed (payee)",
+   "type": "date",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 785,
+     "y": 708,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 809,
+     "y": 708,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 848,
+     "y": 708,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 872,
+     "y": 708,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 911,
+     "y": 708,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 936,
+     "y": 708,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 960,
+     "y": 708,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 985,
+     "y": 708,
+     "w": 19,
+     "h": 26
+    }
+   ],
+   "groups": [
+    2,
+    2,
+    4
+   ],
+   "validator": "date",
+   "placeholder": "DD MM YYYY",
+   "help": "Date you sign."
+  },
+  {
+   "id": "abn",
+   "q": "B1",
+   "section": "B",
+   "label": "Australian business number (ABN) or withholding payer number",
+   "type": "boxes",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 884,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 884,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 884,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 884,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "abn",
+   "placeholder": "51 824 753 556",
+   "help": "Your 11-digit ABN or withholding payer number.",
+   "groups": [
+    2,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "id": "branch",
+   "q": "B1",
+   "section": "B",
+   "label": "Branch number (if applicable)",
+   "type": "boxes",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 421,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 445,
+     "y": 884,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 470,
+     "y": 884,
+     "w": 19,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "001",
+   "help": "Only if applicable."
+  },
+  {
+   "id": "abn_applied",
+   "q": "B2",
+   "section": "B",
+   "label": "If you don't have an ABN or withholding payer number, have you applied for one?",
+   "type": "choice",
+   "options": [
+    {
+     "value": "yes",
+     "label": "Yes",
+     "rect": {
+      "x": 413,
+      "y": 927,
+      "w": 20,
+      "h": 27
+     }
+    },
+    {
+     "value": "no",
+     "label": "No",
+     "rect": {
+      "x": 479,
+      "y": 927,
+      "w": 20,
+      "h": 27
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Only answer if you have no ABN or withholding payer number."
+  },
+  {
+   "id": "biz_name1",
+   "q": "B3",
+   "section": "B",
+   "label": "Legal name or registered business name (line 1)",
+   "type": "boxes",
+   "charset": "any",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 1006,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 1006,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 1006,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 1006,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 1006,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 1006,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "name",
+   "placeholder": "EXAMPLE PTY LTD",
+   "help": "Legal name or registered business name (or your individual name if not in business)."
+  },
+  {
+   "id": "biz_name2",
+   "q": "B3",
+   "section": "B",
+   "label": "Legal name or registered business name (line 2)",
+   "type": "boxes",
+   "charset": "any",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 1047,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 1047,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 1047,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 1047,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 1047,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 1047,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "",
+   "help": "Continue the name here if needed."
+  },
+  {
+   "id": "biz_name3",
+   "q": "B3",
+   "section": "B",
+   "label": "Legal name or registered business name (line 3)",
+   "type": "boxes",
+   "charset": "any",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 1089,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 1089,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 1089,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 1089,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 431,
+     "y": 1089,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 1089,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "",
+   "help": "Continue the name here if needed."
+  },
+  {
+   "id": "biz_addr1",
+   "q": "B4",
+   "section": "B",
+   "label": "Business address (line 1)",
+   "type": "boxes",
+   "charset": "address",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 1150,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 113,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 1150,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 235,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 1150,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 430,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 1150,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "1 BUSINESS ROAD",
+   "help": ""
+  },
+  {
+   "id": "biz_addr2",
+   "q": "B4",
+   "section": "B",
+   "label": "Business address (line 2)",
+   "type": "boxes",
+   "charset": "address",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 1194,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 114,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 138,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 162,
+     "y": 1194,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 236,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 260,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 284,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 309,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 333,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 357,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 382,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 406,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 430,
+     "y": 1194,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 455,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 479,
+     "y": 1194,
+     "w": 19,
+     "h": 27
+    }
+   ],
+   "validator": "none",
+   "placeholder": "",
+   "help": "Optional."
+  },
+  {
+   "id": "biz_suburb",
+   "q": "B4",
+   "section": "B",
+   "label": "Suburb/town/locality",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 1241,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 65,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 89,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 114,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 138,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 162,
+     "y": 1241,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 187,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 211,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 236,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 260,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 284,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 309,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 333,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 357,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 382,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 406,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 430,
+     "y": 1241,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 455,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 479,
+     "y": 1241,
+     "w": 19,
+     "h": 26
+    }
+   ],
+   "validator": "none",
+   "placeholder": "SYDNEY",
+   "help": ""
+  },
+  {
+   "id": "biz_state",
+   "q": "B4",
+   "section": "B",
+   "label": "State/territory",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 40,
+     "y": 1284,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 65,
+     "y": 1284,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 89,
+     "y": 1284,
+     "w": 19,
+     "h": 27
+    }
+   ],
+   "validator": "state",
+   "placeholder": "NSW",
+   "help": ""
+  },
+  {
+   "id": "biz_postcode",
+   "q": "B4",
+   "section": "B",
+   "label": "Postcode",
+   "type": "boxes",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 162,
+     "y": 1284,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 187,
+     "y": 1284,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 211,
+     "y": 1284,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 236,
+     "y": 1284,
+     "w": 18,
+     "h": 27
+    }
+   ],
+   "validator": "postcode",
+   "placeholder": "2000",
+   "help": ""
+  },
+  {
+   "id": "biz_email",
+   "q": "B5",
+   "section": "B",
+   "label": "Primary e-mail address (payer)",
+   "type": "boxes",
+   "charset": "email",
+   "boxes": [
+    {
+     "x": 545,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 570,
+     "y": 867,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 594,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 618,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 643,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 667,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 692,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 716,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 741,
+     "y": 867,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 765,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 789,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 814,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 838,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 863,
+     "y": 867,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 887,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 911,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 936,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 960,
+     "y": 867,
+     "w": 20,
+     "h": 26
+    },
+    {
+     "x": 985,
+     "y": 867,
+     "w": 19,
+     "h": 26
+    },
+    {
+     "x": 545,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 570,
+     "y": 910,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 594,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 618,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 643,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 667,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 692,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 716,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 741,
+     "y": 910,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 765,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 789,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 814,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 838,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 863,
+     "y": 910,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 887,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 911,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 936,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 960,
+     "y": 910,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 985,
+     "y": 910,
+     "w": 19,
+     "h": 27
+    }
+   ],
+   "validator": "email",
+   "placeholder": "payroll@example.com",
+   "help": "Optional.",
+   "rows": [
+    19,
+    19
+   ]
+  },
+  {
+   "id": "contact",
+   "q": "B6",
+   "section": "B",
+   "label": "Contact person",
+   "type": "boxes",
+   "charset": "alpha",
+   "boxes": [
+    {
+     "x": 545,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 570,
+     "y": 972,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 594,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 618,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 643,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 667,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 692,
+     "y": 972,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 716,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 741,
+     "y": 972,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 765,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 789,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 814,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 838,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 863,
+     "y": 972,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 887,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 911,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 936,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 960,
+     "y": 972,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 985,
+     "y": 972,
+     "w": 19,
+     "h": 27
+    }
+   ],
+   "validator": "name",
+   "placeholder": "JANE SMITH",
+   "help": "Who the ATO should contact."
+  },
+  {
+   "id": "biz_phone",
+   "q": "B6",
+   "section": "B",
+   "label": "Business phone number",
+   "type": "boxes",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 692,
+     "y": 1013,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 716,
+     "y": 1013,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 741,
+     "y": 1013,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 765,
+     "y": 1013,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 789,
+     "y": 1013,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 814,
+     "y": 1013,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 838,
+     "y": 1013,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 863,
+     "y": 1013,
+     "w": 19,
+     "h": 27
+    },
+    {
+     "x": 887,
+     "y": 1013,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 911,
+     "y": 1013,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "validator": "phone",
+   "placeholder": "0290001234",
+   "help": "Include the area code (10 digits)."
+  },
+  {
+   "id": "payee_ceased",
+   "q": "B7",
+   "section": "B",
+   "label": "I no longer make payments to this payee",
+   "type": "checkbox",
+   "options": [
+    {
+     "value": "yes",
+     "label": "X",
+     "rect": {
+      "x": 960,
+      "y": 1058,
+      "w": 19,
+      "h": 25
+     }
+    }
+   ],
+   "validator": "none",
+   "help": "Print X in this box if you no longer make payments to this payee."
+  },
+  {
+   "id": "sig_b",
+   "q": "B8",
+   "section": "B",
+   "label": "Payer signature",
+   "type": "signature",
+   "rect": {
+    "x": 526,
+    "y": 1137,
+    "w": 248,
+    "h": 32
+   },
+   "validator": "none",
+   "help": "Declaration by payer: the information you have given is true and correct."
+  },
+  {
+   "id": "date_b",
+   "q": "B8",
+   "section": "B",
+   "label": "Date signed (payer)",
+   "type": "date",
+   "charset": "digits",
+   "boxes": [
+    {
+     "x": 785,
+     "y": 1161,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 809,
+     "y": 1161,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 848,
+     "y": 1161,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 872,
+     "y": 1161,
+     "w": 21,
+     "h": 27
+    },
+    {
+     "x": 911,
+     "y": 1161,
+     "w": 21,
+     "h": 27
+    },
+    {
+     "x": 936,
+     "y": 1161,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 960,
+     "y": 1161,
+     "w": 20,
+     "h": 27
+    },
+    {
+     "x": 985,
+     "y": 1161,
+     "w": 20,
+     "h": 27
+    }
+   ],
+   "groups": [
+    2,
+    2,
+    4
+   ],
+   "validator": "date",
+   "placeholder": "DD MM YYYY",
+   "help": "Date you sign."
+  }
+ ]
+}
